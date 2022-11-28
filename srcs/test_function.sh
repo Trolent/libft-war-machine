@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    test_function.sh                                   :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
+#    By: tfregni <tfregni@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:27:09 by jtoty             #+#    #+#              #
-#    Updated: 2021/02/04 07:13:42 by lmartin          ###   ########.fr        #
+#    Updated: 2022/11/28 20:12:47 by tfregni          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,7 +90,7 @@ test_function()
 				then
 					compilation $function
 				else
-					compilation $(echo ${function} | sed 's/_bonus//g')
+					compilation $(echo ${function}) # | sed 's/_bonus/g')
 				fi
 				check_compilation
 				check=$?
