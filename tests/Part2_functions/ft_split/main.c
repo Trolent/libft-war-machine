@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
+/*   By: tfregni <tfregni@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 12:34:58 by jtoty             #+#    #+#             */
-/*   Updated: 2021/02/06 12:06:03 by lmartin          ###   ########.fr       */
+/*   Updated: 2022/12/01 16:01:04 by tfregni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,20 @@ int		main(int argc, const char *argv[])
 		else
 			if (!tabstr[0])
 				ft_print_result("ok\n");
+	}
+	else if (arg == 7)
+	{
+		if (!(tabstr = ft_split("\0aa\0bbb", '\0')))
+			ft_print_result("NULL");
+		else
+		{
+			while (tabstr[i] != NULL)
+			{
+				ft_print_result(tabstr[i]);
+				write(1, "\n", 1);
+				i++;
+			}
+		}
 	}
 	return (0);
 }
