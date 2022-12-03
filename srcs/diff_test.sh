@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    diff_test.sh                                       :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
+#    By: tfregni <tfregni@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:48 by jtoty             #+#    #+#              #
-#    Updated: 2022/01/22 17:48:18 by fsoares-         ###   ########.fr        #
+#    Updated: 2022/12/01 15:38:17 by tfregni          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,16 +17,16 @@ diff_test()
 	printf "\033[${TEST_COL}G"
 	let "k=1"
 	cd "${PATH_TEST}"/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')
-	kmax=$(ls -l *.output | wc -l)
+	kmax=$(ls -l *.output | wc -l)	# the max amount of tests is the amount of .output files
 	cd "${PATH_TEST}"
 	retvalue=1
-	while [ $k -le $kmax ]
+	while [ $k -le $kmax ]	# -le lower equal_
 	do
 		text="= Test $k "
 		printf "${text}" >> "${PATH_DEEPTHOUGHT}"/deepthought
 		printf "%.s=" $(seq 1 $(( 60 - ${#text} ))) >> "${PATH_DEEPTHOUGHT}"/deepthought
 		printf "\n" >> "${PATH_DEEPTHOUGHT}"/deepthought
-		if [ $k -lt 10 ]
+		if [ $k -lt 10 ] # -lt lower than
 		then
 			text="0"
 		else
