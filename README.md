@@ -35,7 +35,7 @@ Makefile up to date.
 ### Installation
 
 ```bash
-git clone https://github.com/y3ll0w42/libft-war-machine
+git@github.com:Trolent/libft-war-machine.git
 ```
 
 ### Configuration
