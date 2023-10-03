@@ -1,7 +1,8 @@
 # PREAMBLE
 This is an edit of prev libftest made by @jtoty to fit with the 2019 project libft. <br/>
 (ORIGINAL REP : https://github.com/jtoty/Libftest) <br/>
-This update was made by @lmartin <br/>
+this version controls bonus files thanks to the work of @timotif <br/>
+This update was made by @trolland <br/>
 
 # libft-war-machine
 <img align="right" src="./srcs/img_readme.png" width="50%"/>
